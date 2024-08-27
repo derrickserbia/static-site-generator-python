@@ -1,8 +1,14 @@
-from textnode import TextNode, text_type_bold
+from textnode import *
+from helper_methods import split_nodes_image
+
 
 def main():
-    node = TextNode("This is a text node", text_type_bold, "https://www.boot.dev")
-    print(node)
+    node = TextNode(
+        "This is text with an image ![this iamge](https://www.boot.dev) and ![to youtube](https://www.youtube.com/@bootdotdev)",
+        text_type_text,
+    )
+    new_nodes = split_nodes_image([node])
+    print(new_nodes)
 
 
 main()

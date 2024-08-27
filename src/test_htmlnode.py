@@ -101,4 +101,5 @@ class TestParentNode(unittest.TestCase):
         expected = "<div class=\"bold\"><p><b>Bold text</b>Normal text<i>italic text</i>Normal text</p></div>"
         self.assertEqual(node.to_html(), expected)
 
-        
+if __name__ == "__main__":
+    unittest.main()
